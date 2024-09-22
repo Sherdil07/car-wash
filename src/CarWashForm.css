@@ -1,0 +1,123 @@
+/* CarWashForm.css */
+
+/* General form layout */
+form {
+  background-color: #f8f9fa;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form labels and inputs */
+label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Service checkbox section */
+/* Service checkbox section */
+/* Service checkbox section */
+.services {
+  margin-bottom: 15px;
+}
+
+/* Style for each service option */
+.services-type {
+  display: flex; /* Changed to flex for proper alignment */
+  align-items: center;
+  margin-bottom: 20px; /* Space between services */
+  padding: 10px; /* Padding around the service option */
+  border: 1px solid #ccc; /* Border around each service option */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f0f4f8; /* Light background color for contrast */
+  transition: background-color 0.3s; /* Smooth background change on hover */
+  width: 50%; /* Full width for each service */
+}
+
+.services-type:hover {
+  background-color: #e0e7ef; /* Change background color on hover */
+}
+
+.services-type label {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Ensure checkbox and label are on the same line */
+.services div {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.services div label {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+}

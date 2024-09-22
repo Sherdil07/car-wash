@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// In App.js
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import CarWashForm from "./CarWashForm";
+import ServiceDashboard from "./ServiceDashboard";
+import { ServicePriceProvider } from "./ServicePriceContext";
+import Invoice from "./Invoice";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ServicePriceProvider>
+      <Router>
+        <div>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/service-dashboard">Change Amount</Link>
+            <Link to="/client-records">Client Records</Link>
+          </nav>
+
+          <Routes>
+            <Route path="/" element={<CarWashForm />} />
+            <Route path="/service-dashboard" element={<ServiceDashboard />} />
+            <Route path="/invoice" element={<Invoice />} />{" "}
+            {/* Add Invoice route */}
+          </Routes>
+        </div>
+      </Router>
+    </ServicePriceProvider>
   );
 }
 
